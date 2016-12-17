@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List View"
+        android:textColor="@color/colorBlack"
+        android:textSize="34dp"
+        android:gravity="center"
+        android:background="@color/colorPurple"
+        android:alpha="0.8"
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/ListBt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorBlue"
+            android:text="Study"/>
+        <Button
+            android:id="@+id/ListBt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPink"
+            android:text="Work"/>
+        <Button
+            android:id="@+id/ListBt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorBlue"
+            android:text="Rest"/>
+        <Button
+            android:id="@+id/ListBt4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPink"
+            android:text="Eat"/>
+        <Button
+            android:id="@+id/ListBt5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlue"
+            android:layout_weight="1"
+            android:text="Move"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Num of LIST  : "
+            android:textSize="23dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            />
+
+        <Button
+            android:id="@+id/closeBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="End"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/List1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </ListView>
+
+</LinearLayout>
