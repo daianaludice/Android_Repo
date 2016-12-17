@@ -90,8 +90,6 @@ public class ViewActivity extends Activity implements View.OnClickListener {
 
     public void deleteInfo(int _id){
         String sql = "DELETE FROM location WHERE _id = " + _id;
-        sqlite.execSQL(sql);
-        sqlite.close();
     }
 
     public void refresh(){
@@ -102,8 +100,7 @@ public class ViewActivity extends Activity implements View.OnClickListener {
         String sql;
         switch (v.getId()){
             case R.id.listbtn01:
-                sql = "SELECT * FROM location WHERE etc=1";
-                cursor = sqlite.rawQuery(sql, null);
+                sql = "SELECT * FROM location ";
 
                 if(cursor.getCount() > 0){
                     countT.setText("Num of Study : " + cursor.getCount());
@@ -119,8 +116,7 @@ public class ViewActivity extends Activity implements View.OnClickListener {
                 }
                 break;
             case R.id.listbtn02:
-                sql = "SELECT * FROM location WHERE etc=2";
-                cursor = sqlite.rawQuery(sql, null);
+                sql = "SELECT * FROM location ";
 
                 if(cursor.getCount() > 0){
                     countT.setText("Num of Work : " + cursor.getCount());
@@ -137,7 +133,6 @@ public class ViewActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.listbtn03:
                 sql = "SELECT * FROM location WHERE etc=3";
-                cursor = sqlite.rawQuery(sql, null);
 
                 if(cursor.getCount() > 0){
                     countT.setText("Num of Rest : " + cursor.getCount());
@@ -154,7 +149,6 @@ public class ViewActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.listbtn04:
                 sql = "SELECT * FROM location WHERE etc=4";
-                cursor = sqlite.rawQuery(sql, null);
 
                 if(cursor.getCount() > 0){
                     countT.setText("Num of Eat : " + cursor.getCount());
@@ -193,9 +187,6 @@ public class ViewActivity extends Activity implements View.OnClickListener {
     public void getInfoForCursorAdapter(){
 
         String sql = "SELECT * FROM location";
-        cursor = sqlite.rawQuery(sql, null);
-
-
 
         if(cursor.getCount() > 0) {
             countT.setText("Num of List : " + cursor.getCount());
@@ -214,7 +205,7 @@ public class ViewActivity extends Activity implements View.OnClickListener {
     protected void onDestroy() {
         super.onDestroy();
         cursor.close();
-        sqlite.close();
+
     }
 
     @Override

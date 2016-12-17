@@ -185,20 +185,11 @@ public class MainActivity extends Activity {
         String longitudeStr = "longitude\r\n";
         String workStr      = "Take or Event\r\n";
 
-        while(cursor.moveToNext()){
-            dateStr     += cursor.getString(1) + "\r\n";
-            latitudeStr += cursor.getString(2) + "\r\n\r\n";
-            longitudeStr+= cursor.getString(3) + "\r\n\r\n";
-            workStr     += cursor.getString(4) + "\r\n\r\n";
-        }
-
-
         date_txt.setText(dateStr);
         latitude_txt.setText(latitudeStr);
         longitude_txt.setText(longitudeStr);
         work_txt.setText(workStr);
 
-        cursor.close();
 
     }
 

@@ -42,7 +42,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap = googleMap;
         String sql = "SELECT * FROM location";
-        cursor = sqlite.rawQuery(sql, null);
 
         while(cursor.moveToNext()){
             LatLng temp = new LatLng(Double.parseDouble(cursor.getString(2)), Double.parseDouble(cursor.getString(3)));

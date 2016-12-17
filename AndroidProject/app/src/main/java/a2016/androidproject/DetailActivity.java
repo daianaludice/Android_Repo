@@ -55,20 +55,13 @@ public class DetailActivity extends Activity{
 
     public boolean updateInfo(int _id){
         String work = detailText01.getText().toString();
-        String sql  = "UPDATE location SET work='" +work+"' WHERE _id='"+_id+"'";
-        try{
-            sqlite.execSQL(sql);
-            return true;
-        }catch (Exception e){
-            return false;
-        }
+        String sql  = "UPDATE location SET work='" +work+"' id='"+_id+"'";
+        return sql;
     }
 
     public void getInfoForCursorAdapter(int _id){
 
-        String sql = "SELECT * FROM location WHERE _id = " + _id;
-
-        cursor = sqlite.rawQuery(sql, null);
+        String sql = "SELECT FROM location id = " + _id;
 
         String work = "";
 
